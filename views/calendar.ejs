@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Calendar Flip Animation</title>
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,900,700,500,300,100' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css"><link rel="stylesheet" href="./style.css">
+  
+  <link rel="stylesheet" href="/stylesheets/style2.css" type="text/css">
+  <script>
+    const events = [
+  {
+    date: "December 15th, 2022",
+    time: "6:35 PM",
+    address: "129 W 81st St, New York, NY",
+    observations: "Be there 15 minutes earlier"
+  },
+  {
+    date: "December 25th, 2022",
+    time: "9:00 AM",
+    address: "1 Times Square, New York, NY",
+    observations: "Bring a gift"
+  }
+];
+
+// Loop through the events and add them to the calendar
+for (let event of events) {
+  const dateElement = document.querySelector(`[data-date="${event.date}"]`);
+  if (dateElement) {
+    dateElement.classList.add("event");
+    dateElement.title = `${event.time}\n${event.address}\n${event.observations}`;
+  }
+}
+  </script>
+</head>
+<body>
+
+
+    <div class="container">
+      <div class="calendar">
+        <div class="front">
+          <div class="current-date">
+            <h1>Wed 21th</h1>
+            <h1>December 2022</h1>	
+          </div>
+
+          <div class="current-month">
+            <ul class="week-days">
+              <li>MON</li>
+              <li>TUE</li>
+              <li>WED</li>
+              <li>THU</li>
+              <li>FRI</li>
+              <li>SAT</li>
+              <li>SUN</li>
+            </ul>
+
+            <div class="weeks">
+              <div class="first">
+                <span class="last-month">28</span>
+                <span class="last-month">29</span>
+                <span class="last-month">30</span>
+                <span class="last-month">1</span>
+                <span>02</span>
+                <span>03</span>
+                <span>04</span>
+              </div>
+
+              <div class="second">
+                <span>05</span>
+                <span>06</span>
+                <span class="event">07</span>
+                <span>08</span>
+                <span>09</span>
+                <span>10</span>
+                <span>11</span>
+              </div>
+
+              <div class="third">
+                <span>12</span>
+                <span>13</span>
+                <span>14</span>
+                <span>15</span>
+                <span>16</span>
+                <span>17</span>
+                <span>18</span>
+              </div>
+
+              <div class="fourth">
+                <span>19</span>
+                <span>20</span>
+                <span class="active">21</span>
+                <span>22</span>
+                <span>23</span>
+                <span>24</span>
+                <span>25</span>
+              </div>
+
+              <div class="fifth">
+                <span>26</span>
+                <span>27</span>
+                <span>28</span>
+                <span>29</span>
+                <span>30</span>
+                <span>31</span>
+                <span>01</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="back">
+          <input placeholder="What's the event?">
+          <div class="info">
+            <div class="date">
+              <p class="info-date">
+              Date: <span>December 15th, 2022</span>
+              </p>
+              <p class="info-time">
+                Time: <span>6:35 PM</span>
+              </p>
+            </div>
+            <div class="address">
+              <p>
+                Address: <span>129 W 81st St, New York, NY</span>
+              </p>
+            </div>
+            <div class="observations">
+              <p>
+                Observations: <span>Be there 15 minutes earlier</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="actions">
+            
+            <button class="dismiss">
+              Dismiss <i class="ion-android-close"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js'></script><script  src="./script.js"></script>
+  <script src="/javascripts/script.js"></script>
+</body>
+</html>

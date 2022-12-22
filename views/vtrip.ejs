@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Trip advisor</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+        <link rel="manifest" href="/images/site.webmanifest">
+    
+    
+    
+        <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:200,300,400,400i,500,600,700,800,900%7CSatisfy&display=swap" rel="stylesheet">
+    
+    
+        <link rel="stylesheet" href="/stylesheets/animate.min.css"  type="text/css">
+        <link rel="stylesheet" href="/stylesheets/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="/stylesheets/owl.carousel.min.css" type="text/css">
+        <link rel="stylesheet" href="/stylesheets/owl.theme.default.min.css" type="text/css">
+        <link rel="stylesheet" href="/stylesheets/magnific-popup.css" type="text/css">
+        <link rel="stylesheet" href="/stylesheets/fontawesome-all.min.css" type="text/css">
+        <link rel="stylesheet" href="/stylesheets/swiper.min.css" type="text/css">
+        <link rel="stylesheet" href="/stylesheets/bootstrap-select.min.css" type="text/css">
+        <link rel="stylesheet" href="/stylesheets/tripo-icons.css">
+        <link rel="stylesheet" href="/stylesheets/jquery.mCustomScrollbar.min.css" type="text/css">
+        <link rel="stylesheet" href="/stylesheets/bootstrap-datepicker.min.css" type="text/css">
+        <link rel="stylesheet" href="/stylesheets/vegas.min.css" type="text/css">
+        <link rel="stylesheet" href="/stylesheets/nouislider.min.css" type="text/css">
+        <link rel="stylesheet" href="/stylesheets/nouislider.pips.css" type="text/css">
+        <link rel="stylesheet" href="/stylesheets/style.css" type="text/css">
+        <link rel="stylesheet" href="/stylesheets/responsive.css" type="text/css">
+    </head>
+<body>
+    <div class="preloader">
+        <img src="assets/images/loader.png" class="preloader__image" alt="">
+    </div>
+    <div class="page-wrapper">
+        <div class="site-header__header-one site-header__home-two-wrap">
+            <div class="topbar-one">
+                <div class="container-fluid">
+                    <div class="topbar-one__left">
+                        <a href="mailto:email@gmail.com">Email@gmail.com</a>
+                        <a >Contact us</a>
+                        <a href="tel:+961 81602630">+961 000000000</a>
+                       
+                    </div>
+                    <div class="topbar-one__right">
+                        <div class="topbar-one__social">
+                            <a href="https://www.facebook.com/" target="_blank"><i
+                                    class="fab fa-facebook-square"></i></a>
+                            <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.Instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <header class="main-nav__header-one site-header__home-two ">
+                <nav class="header-navigation stricky">
+                    <div class="container">
+
+                        <div class="main-nav__logo-box">
+                            <a href="/homepage" class="main-nav__logo">
+                                <img src="/images/logo-light.png" class="main-logo" width="123"
+                                    alt="Awesome Image" />
+                            </a>
+                            <a href="#" class="side-menu__toggler"><i class="fa fa-bars"></i>
+                            </a>
+                        </div>
+                        <div class="main-nav__main-navigation">
+                            <ul class=" main-nav__navigation-box">
+                                <li class="dropdown current">
+                                    <a href="/homepage">Home</a>
+                                    <ul>
+                                </li>
+                            </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="/destinations">Destinations</a>
+                              
+                            </li>
+                            <li class="dropdown">
+                                <a href="/tour">Find trips</a>
+                                <ul>
+                                    <li><a href="/btrip">Business trips</a></li>
+                                    <li><a href="/vtrip">Vacation trips</a></li>
+                                    <li><a href="/tour">Other trips</a></li>
+                                    
+   
+                                </ul>
+                            </li>
+                            
+                            <li class="dropdown">
+                                <a href="#">Pages</a>
+                                <ul>
+                                    <li><a href="/about">About Us</a></li>
+                                    <li><a href="/tourguides">Tour Guides</a></li>
+                                 
+                                    <li><a href="/faq">FAQ's</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="/addevent">Add Event</a>
+                                <ul>
+                            
+                                    <li><a href="/addevent">Add Event</a></li>
+   
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="/calendar">Calendar</a>
+                               
+                            </li>
+                            <li>
+                                <a href="/contact">Contact</a>
+                            </li>
+
+                            <li class="dropdown">
+                                
+                                <% if (!req.session.isLoggedIn) { %>
+        
+                                    <a href="">Profile</a>
+                                    <ul>
+                                       
+                                           
+                                            <li><a href="/signup">Register</a></li>
+                                            <li><a href="/login">Login</a></li>
+                                 
+                                    </ul>
+                                       
+                                    <% } else { %>
+                                        <li>
+                                            <form action="/logout" method="post">
+                                            <button type="submit">Logout</button>
+                                            </form>
+                                        </li> 
+                                    
+                                  <% } %>
+                                  
+                               
+                                
+                            </li>
+                            
+                        
+
+                            </ul>
+                       
+                        </div>
+                    
+                       
+                          
+                      
+                          
+                            <div class="main-nav__right">
+                          
+                       
+
+                                <select name="currency" id="currency" class="selectpicker">
+                                    <option value="USD"> USD</option>
+                                    <option value="LBP"> LBP</option>
+                                    
+    
+                                </select>
+                                <select name="languages" id="languages" class="selectpicker">
+                                    <option value="ENG">ENG</option>
+                                    <option value="ARB">ARB</option>
+    
+                                </select>
+                               
+                            </div>
+                        
+                           
+                        </div>
+                    
+
+                </nav>
+            </header>
+        </div>
+        <section class="page-header" style="background-image: url(/images/eventimg.png);">
+            <div class="container">
+                <br><br>
+                <h2>Vacation Trips</h2>
+                <ul class="thm-breadcrumb list-unstyled">
+                    <li><a href="/homepage">Home</a></li>
+                    <li><span>Tours</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="tour-one tour-grid">
+            <div class="container">
+                <div class="tour-sorter-one">
+                 
+                    <div class="tour-sorter-one__right">
+                        <div class="tour-sorter-one__select">
+                            <select name="sort-by" id="sort-by" class="selectpicker">
+                                <option value="Sort">Sort</option>
+                                <option value="By Date">By Date</option>
+                                <option value="By Price">By Price</option>
+                            </select>
+                        </div>
+                       
+                    </div>
+
+                </div>
+                <div>
+             
+                <% if (events.length > 0) { %>
+                   
+                            <% for (let event of events) { %>
+                            <div class="tour-one__single" >
+                                <div class="tour-one__image" >
+                                    <img src="<%= event.image %>"   alt="">
+                                    <a href="/vtrip/<%= event._id %>"><i class="fa fa-heart"></i></a>
+                                </div>
+                                <div  class="tour-one__content" >
+                                    
+                                    <p><span><%= event.pricePerPerson %>$</span>Per Person</p>
+                                    <ul class="tour-one__meta list-unstyled">
+                                        <li><a href="/vtrip/<%= event._id %>"><i class="far fa-clock"></i> <%= event.eventLength %></a></li>
+                                        <li><a href="/vtrip/<%= event._id %>"><i class="far fa-user-circle"></i> <%= event.eventAgeRequired %></a></li>
+                                        <li><a href="/vtrip/<%= event._id %>"><i class="far fa-map"></i> <%= event.location %></a></li>
+                                   
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <% } %>
+                        </div>
+                        
+                        <% } else {  %>
+                            <h1>No Events found</h1>
+                            <% } %>
+        </section>
+
+        <footer class="site-footer">
+            <div class="site-footer__bg" style="background-image: url(/images/footer-bg-1-1.png);">
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="footer-widget__column footer-widget__about">
+                        <a href="/homepage" class="footer-widget__logo"><img src="/images/logo-dark.png"
+                                width="123" alt=""></a>
+                        <p>Plan your future trips with us</p>
+                        <a href="mailto:Email@gmail.com">Email@gmail.com</a> <br>
+                        <a href="tel:+961 000000000">+961 000000000</a>
+                    </div>
+                    <div class="footer-widget__column footer-widget__links">
+                        <h3 class="footer-widget__title">Company</h3>
+                        <ul class="footer-widget__links-list list-unstyled">
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/tourguides">Meet the Team</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget__column footer-widget__links">
+                        <h3 class="footer-widget__title">Links</h3>
+                        <ul class="footer-widget__links-list list-unstyled">
+                            <li><a href="/destinations">Destinations</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                            <li><a href="/tour">Tours</a></li>
+                            <li><a href="/faq">FAQ</a></li>
+                      
+                       
+                        </ul>
+                    </div>
+                  
+                    <div class="footer-widget__column footer-widget__options">
+                        <h3 class="footer-widget__title">Options</h3>
+                        <select name="currency" id="currency-2" class="selectpicker">
+                            <option value="USD">USD</option>
+                            <option value="LBP">LBP</option>
+
+                        </select>
+                        <select name="languages" id="languages-2" class="selectpicker">
+                            <option value="ENG">ENG</option>
+                            <option value="ARB">ARB</option>
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="site-footer__bottom">
+            <div class="container">
+
+                <div class="site-footer__social">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+
+
+    <div class="side-menu__block">
+
+
+        <div class="side-menu__block-overlay custom-cursor__overlay">
+            <div class="cursor"></div>
+            <div class="cursor-follower"></div>
+        </div>
+        <div class="side-menu__block-inner ">
+            <div class="side-menu__top justify-content-end">
+
+                <a href="#" class="side-menu__toggler side-menu__close-btn"><img
+                        src="/images/close-1-1.png" alt=""></a>
+            </div>
+
+
+            <nav class="mobile-nav__container">
+               
+            </nav>
+            <div class="side-menu__sep"></div>
+            <div class="side-menu__content">
+               
+                <p><a href="mailto:Email@gmail.com">Email@gmail.com</a> <br> <a href="tel:+961 000000000">+961
+                        000000000</a></p>
+                <div class="side-menu__social">
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="search-popup">
+        <div class="search-popup__overlay custom-cursor__overlay">
+            <div class="cursor"></div>
+            <div class="cursor-follower"></div>
+        </div>
+        <div class="search-popup__inner">
+            <form action="#" class="search-popup__form">
+                <input type="text" name="search" placeholder="Type here to Search....">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+
+
+    
+    <script src="/javascripts/jquery.min.js"></script>
+    <script src="/javascripts/bootstrap.bundle.min.js"></script>
+    <script src="/javascripts/owl.carousel.min.js"></script>
+    <script src="/javascripts/waypoints.min.js"></script>
+    <script src="/javascripts/jquery.counterup.min.js"></script>
+    <script src="/javascripts/TweenMax.min.js"></script>
+    <script src="/javascripts/wow.js"></script>
+    <script src="/javascripts/jquery.magnific-popup.min.js"></script>
+    <script src="/javascripts/jquery.ajaxchimp.min.js"></script>
+    <script src="/javascripts/swiper.min.js"></script>
+    <script src="/javascripts/typed-2.0.11.js"></script>
+    <script src="/javascripts/vegas.min.js"></script>
+    <script src="/javascripts/jquery.validate.min.js"></script>
+    <script src="/javascripts/bootstrap-select.min.js"></script>
+    <script src="/javascripts/countdown.min.js"></script>
+    <script src="/javascripts/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/javascripts/bootstrap-datepicker.min.js"></script>
+    <script src="/javascripts/nouislider.min.js"></script>
+    <script src="/javascripts/isotope.js"></script>
+    <script src="/javascripts/theme.js"></script>
+</body>
+
+</html> 
